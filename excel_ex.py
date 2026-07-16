@@ -67,6 +67,9 @@ def extract_pxp_data(folder_path):
                     # Extract Max (64th row -> index 63)
                     max_val = df.iloc[63, col_idx]
                     
+                    # Extract Avg (65th row -> index 64)
+                    avg_val = df.iloc[64, col_idx]
+                    
                     # Extract Std Dev (84th row -> index 83)
                     std_dev = df.iloc[83, col_idx]
                     
@@ -78,6 +81,7 @@ def extract_pxp_data(folder_path):
                         "Tag Name": tag_name,
                         "Min": min_val,
                         "Max": max_val,
+                        "Average": avg_val,
                         "Standard Deviation": std_dev
                     })
                 
